@@ -1,8 +1,14 @@
+import img from "../../img/Clarusway.png";
 
 const Header = () => {
   return (
-    <h1>Clarusway</h1>
-  )
-}
+    <>
+      <nav className="nav">
+        <img src={img} alt="clarusway_logo" />
+      </nav>
+      <h1>Lesson Reminder</h1>
+    </>
+  );
+};
 
-export default Header
+export default Header;

@@ -1,14 +1,28 @@
+import data from "../../helper/data";
 
 const LessonCard = () => {
   return (
-    <>
-    <img src="" alt="" />
-    <h3>Lesson Name:</h3>
-    <p></p>
-    <h3>Lesson Hour:</h3>
-    <p></p>
-    </>
-  )
-}
+    <div className="row">
+      {data.map((item) => {
+        const { id, image, name, hour } = item;
+        return (
+          <div className="lesson_lesson col col-12 col-sm-12 col-md-6 col-lg-4" key={id}>
+            <div>
+              <img src={image} alt="lesson_logo" />
+            </div>
+            <div className="lesson_text">
+              <p className="lesson_parag">
+                <span className="lesson_span">Lesson {name}</span>
+              </p>
+              <p className="lesson_parag">
+                <span className="lesson_span">Lesson {hour}</span>
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-export default LessonCard
+export default LessonCard;
